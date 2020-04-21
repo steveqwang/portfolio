@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Link } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import './App.css';
 
 class App extends React.Component {
@@ -38,7 +39,15 @@ class App extends React.Component {
           <Navbar className="border-bottom">
             <Navbar.Brand>Steve Love</Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="navbar-toggle" />
+            <Navbar.Collapse aria-controls="navbar-toggle">
+              <Nav>
+                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/about">About</Link>
+                <Link className="nav-link" to="/contact">Contact</Link>
+              </Nav>
+            </Navbar.Collapse>
+
+
 
           </Navbar>
 
